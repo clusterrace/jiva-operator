@@ -147,6 +147,9 @@ spec:
           hostPath:
             path: /
             type: Directory
+{{- if .Values.csiNode.hostPID }}
+      hostPID: true
+{{- end }}
 {{- if .Values.imagePullSecrets }}
       imagePullSecrets:
 {{ toYaml .Values.imagePullSecrets | indent 2 }}
