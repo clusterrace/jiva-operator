@@ -166,6 +166,7 @@ csiNode:
   nodeSelector: {}
   tolerations: []
   securityContext: {}
+  hostPID: false
 
 csiDriver:
   create: true
@@ -223,3 +224,5 @@ localpv-provisioner:
   # Disable openebs-device deviceClass by default.
   deviceClass:
     enabled: false
+
+csiIscsiadmConfig: ""
